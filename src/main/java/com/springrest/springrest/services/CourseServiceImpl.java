@@ -43,15 +43,14 @@ public class CourseServiceImpl implements CourseService {
 	}
 	@Override
 	public Course updateCourse(Course course) {
-		// TODO Auto-generated method stub
 			courseDao.save(course);
 			return course;
 	}
 	@Override
-	public void deleteCourse(long parseLong) {
-		// TODO Auto-generated method stublist=this. list.stream() .filter(e->e.getId()!=parseLong) .collect(Collectors. toList());
-		Course entity=courseDao.getReferenceById(parseLong);
-		courseDao.delete(entity);
+	public void deleteCourse(long courseId) {
+		//Course entity=courseDao.getReferenceById(courseId);
+		courseDao.deleteById(courseId);
+		
 		
 	}
 

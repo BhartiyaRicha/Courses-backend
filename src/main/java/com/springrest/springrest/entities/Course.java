@@ -3,18 +3,13 @@ package com.springrest.springrest.entities;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.SequenceGenerator;
+
 import javax.persistence.Table;
 
 @Entity
 @Table(name="CourseInfo")
 public class Course {
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="id_generator")
-	@SequenceGenerator(name="id_generator", sequenceName="id_seq",initialValue=100, allocationSize=1)
-	private long accountNo;
 	private long id;
 	private String title;
 	private String description;

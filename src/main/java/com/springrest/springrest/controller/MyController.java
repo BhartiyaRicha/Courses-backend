@@ -60,7 +60,7 @@ public class MyController {
 	@DeleteMapping(" /courses/{courseId}")
 	public ResponseEntity<HttpStatus> deleteCourse(@PathVariable String courseId) {
 	try {
-		this. courseService.deleteCourse(Long.parseLong (courseId));
+		this. courseService.deleteCourse(Long.parseLong(courseId));
 		return new ResponseEntity<>(HttpStatus.OK);
 	} 
 		catch (Exception e) {
